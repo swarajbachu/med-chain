@@ -44,6 +44,8 @@ const MedicalRecords = () => {
                  px-16">Submit</button>
 
 
+                <input type="submit"
+                className="input input-bordered input-primary m-5 w-full max-w-xs flex"/>
 
             </form>
         </div>
