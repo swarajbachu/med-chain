@@ -7,6 +7,15 @@ const MedicalRecords = () => {
                 <input type="text" 
                 placeholder="Type here" 
                 className="input input-bordered input-primary w-full max-w-xs" />
+                <input type="text" 
+                placeholder="Type here" 
+                className="input input-bordered input-primary w-full max-w-xs" />
+                <input type="text" 
+                placeholder="Type here" 
+                className="input input-bordered input-primary w-full max-w-xs" />
+                <input type="text" 
+                placeholder="Type here" 
+                className="input input-bordered input-primary w-full max-w-xs" />                
             </form>
         </div>
     )
