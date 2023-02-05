@@ -23,7 +23,7 @@ const UserForm = () => {
     // form: name, age, blood_group, allergies, medication, about
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)} className= "p-16 border-2 rounded-xl border-gray-400">
+            <form onSubmit={handleSubmit(onSubmit)} className= "p-16 border-2 rounded-xl border-gray-400 flex flex-col">
 
 
                 <input type="text" 
@@ -57,7 +57,7 @@ const UserForm = () => {
                 className="input input-bordered input-primary m-5 w-full max-w-xs flex" 
                 {...register("about")}/>
 
-                <button type="submit" className="btn btn-primary px-16">Submit</button>
+                <button type="submit" className="btn btn-primary ml-4 px-16">Submit</button>
 
 
             </form>
