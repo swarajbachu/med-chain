@@ -12,24 +12,7 @@ const MedicalRecords = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-
-
-                <input type="text" 
-                placeholder="Enter name of the file" 
-                className="input input-bordered input-primary m-5 b-full max-w-xs flex" 
-                {...register("filename")}/>
-
-                <input type="text" 
-                placeholder="Issued by doctor" 
-                className="input input-bordered input-primary m-5 w-full max-w-xs flex"
-                {...register("doctor_name")}/>
-
-                <input type="text" 
-                placeholder="Issued by hospital" {...register("hopital_name")}
-                className="input input-bordered input-primary m-5 w-full max-w-xs flex" 
-                />
-
+            <form>
                 <input type="text" 
                 placeholder="Tags comma seperated" 
                 className="input input-bordered input-primary m-5 w-full max-w-xs flex"
@@ -37,10 +20,7 @@ const MedicalRecords = () => {
                 
                 <input type="file" 
                 placeholder="Type here" 
-                className="input input-bordered input-primary m-5 w-full max-w-xs flex" 
-                {...register("file")}/>
-
-
+                className="input input-bordered input-primary w-full max-w-xs" />
             </form>
         </div>
     )
