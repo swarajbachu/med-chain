@@ -9,10 +9,10 @@ const MedicalRecords = () => {
 
 
     const schema = yup.object().shape({
-        filename: yup.string().required(),
-        doctor_name: yup.string(""),
-        hopital_name: yup.string().required(),
-        tags: yup.string(),
+        filename: yup.string().required("Name is required"),
+        doctor_name: yup.string(),
+        hopital_name: yup.string(),
+        tags: yup.string().required("Description is required"),
         file: yup.string().required(),
     });
 
