@@ -2,15 +2,17 @@ import React from 'react'
 
 const MedicalCard = () => {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl mt-10">
+    <div className="card w-96 bg-base-100 shadow-lg mt-10 mr-10">
     <div className="card-body text-left">
       <h2 className="card-title">Date: </h2>
-      <p>Desease Diagonized : </p>
-      <p>Treatment:  </p>
+      <p >Desease Diagonized : </p>
+      <p>Description:  </p>
       <p>Hospital: </p>
       <p>BMR: </p>
       <p>ECG: </p>
-      <p>PG: </p>    
+      <p>PG: </p>
+      <button className="btn btn-primary">Click here to see attachment</button>
+    
     </div>
   </div>
   )

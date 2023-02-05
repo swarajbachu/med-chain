@@ -3,9 +3,13 @@ import { MedicalCard,UserDetailRecord } from '../componenets'
 
 const MedicalRecordPage = () => {
   return (
-    <div>
+    <div className='w-[100vw] p-16 '>
       <UserDetailRecord/>
-        <MedicalCard/>
+      <div className='flex'>
+      <MedicalCard/>
+      <MedicalCard/>
+      </div>
+      
     </div>
   )
 }
