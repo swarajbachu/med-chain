@@ -1,13 +1,14 @@
-import React from 'react'
-import { MedicalCard,UserDetailRecord } from '../componenets'
+import React from "react";
+import { MedicalCard, MedicalRecords, UserDetailRecord } from "../componenets";
 
 const MedicalRecordPage = () => {
   return (
     <div>
-      <UserDetailRecord/>
-        <MedicalCard/>
+      {/* <UserDetailRecord/>
+        <MedicalCard/> */}
+      <MedicalRecords />
     </div>
-  )
-}
+  );
+};
 
-export default MedicalRecordPage
+export default MedicalRecordPage;
