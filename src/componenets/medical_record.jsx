@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import state from "../state";
 
 const MedicalRecords = () => {
   const [fileImg, setFileImg] = useState(null);
@@ -9,6 +10,7 @@ const MedicalRecords = () => {
     console.log(data);
     try {
       const formData = new FormData();
+
       formData.append("file", fileImg);
       const resfile = await fetch(
         "https://api.pinata.cloud/pinning/pinFileToIPFS",
@@ -16,6 +18,7 @@ const MedicalRecords = () => {
           method: "post",
           data: formData,
           headers: {
+            maxContentLength: Infinity,
             pinata_api_key: `0108888205bf09943941`,
             pinata_secret_api_key: `7a37ef66dcbf0b473fe215d24e2c8c4e4be7dac54fd1f4de13f4106bf12453be`,
             "Content-Type": "multipart/form-data",
