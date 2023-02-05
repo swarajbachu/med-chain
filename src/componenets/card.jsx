@@ -11,7 +11,7 @@ const MedicalCard = () => {
       <p>BMR: </p>
       <p>ECG: </p>
       <p>PG: </p>
-      <button className="btn btn-primary">Click here to see attachment</button>
+      <button className="btn btn-primary text-sm capitalize font-semibold">Click here to see attachment</button>
     
     </div>
   </div>

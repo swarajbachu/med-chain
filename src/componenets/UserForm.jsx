@@ -14,7 +14,9 @@ const UserForm = () => {
         about: yup.string(),
     });
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(schema),
+    });
 
     const onSubmit = (data) => {
         console.log(data)
