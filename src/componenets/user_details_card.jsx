@@ -4,7 +4,7 @@ const UserDetailRecord = () => {
   return (
     <div className='w-full rounded-xl shadow-lg bg-slate-100'>
         <div className='flex flex-col text-left p-12'>
-            <h1 className='text-bold text-xl'>User Details</h1>
+            <h1 className='c'>User Details</h1>
             <h3>Name:</h3>
             <h3>Age:</h3>
             <h3> Height: </h3>
