@@ -36,40 +36,50 @@ const MedicalRecords = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           type="text"
-          placeholder="Enter name of the file"
+          placeholder="Disease Diagonesed"
           className="input input-bordered input-primary m-5 b-full max-w-xs flex"
           {...register("filename")}
         />
 
         <input
           type="text"
-          placeholder="Issued by doctor"
+          placeholder="Doctor Consulted"
           className="input input-bordered input-primary m-5 w-full max-w-xs flex"
           {...register("doctor_name")}
         />
 
         <input
           type="text"
-          placeholder="Issued by hospital"
+          placeholder="Hospital"
           {...register("hopital_name")}
           className="input input-bordered input-primary m-5 w-full max-w-xs flex"
         />
 
         <input
-          type="text"
-          placeholder="Tags comma seperated"
+          type="Decription"
+          placeholder="Decription"
           className="input input-bordered input-primary m-5 w-full max-w-xs flex"
           {...register("tags")}
         />
 
         <input
           type="file"
-          placeholder="Type here"
-          className="input input-bordered input-primary m-5 w-full max-w-xs flex"
+          className="file-input file-input-bordered w-full max-w-xs ml-4"
           {...register("file")}
-          onChange={(e) => setFileImg(e.target.files[0])}
         />
-        <button type="submit">Upload</button>
+
+        <button
+          type="submit"
+          className="btn btn-active btn-primary ml-10
+                 px-16"
+        >
+          Submit
+        </button>
+
+        <input
+          type="submit"
+          className="input input-bordered input-primary m-5 w-full max-w-xs flex"
+        />
       </form>
     </div>
   );

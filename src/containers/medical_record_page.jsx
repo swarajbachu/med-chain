@@ -3,10 +3,12 @@ import { MedicalCard, MedicalRecords, UserDetailRecord } from "../componenets";
 
 const MedicalRecordPage = () => {
   return (
-    <div>
-      {/* <UserDetailRecord/>
-        <MedicalCard/> */}
-      <MedicalRecords />
+    <div className="w-[100vw] p-16 ">
+      <UserDetailRecord />
+      <div className="flex">
+        <MedicalCard />
+        <MedicalCard />
+      </div>
     </div>
   );
 };
