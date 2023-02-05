@@ -1,6 +1,6 @@
 import { MedicalRecords, MedicalCard, UserForm } from './componenets'
 import { MedicalRecordPage } from './containers'
-import MedChainLandingPage from './componenets/MedChainLandingPage'
+import MedChainLandingPage from './containers/MedChainLandingPage'
 
 
 import './App.css'

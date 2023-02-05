@@ -2,8 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-import { MedicalRecordPage,MedicalRecordFromPage } from './containers'
-import { MedicalRecords } from './componenets'
+import { MedicalRecordPage,MedicalRecordFromPage,UserFormPage } from './containers'
 
 import {
   createBrowserRouter,
@@ -23,7 +22,12 @@ const router = createBrowserRouter([
   {
     path: "/medical-record-form",
     element: <MedicalRecordFromPage />,
+  },
+  {
+    path: "/user-form",
+    element: <UserFormPage />,
   }
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

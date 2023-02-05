@@ -1,7 +1,18 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 const UserForm = () => {
+
+    const schema = yup.object().shape({
+        name: yup.string().required("name is required"),
+        age: yup.number().required("age is required").min(0).max(100),
+        blood_group: yup.string().required("blood group is required"),
+        allergies: yup.string(),
+        medication: yup.string(),
+        about: yup.string(),
+    });
 
     const { register, handleSubmit } = useForm();
 
@@ -12,7 +23,7 @@ const UserForm = () => {
     // form: name, age, blood_group, allergies, medication, about
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} className= "p-16 border-2 rounded-xl border-gray-400">
 
 
                 <input type="text" 
@@ -21,7 +32,7 @@ const UserForm = () => {
                 {...register("name")}/>
 
                 <input type="number" 
-                placeholder="" 
+                placeholder="Age" 
                 className="input input-bordered input-primary m-5 w-full max-w-xs flex"
                 {...register("age")}/>
 
@@ -45,6 +56,8 @@ const UserForm = () => {
                 placeholder="About" 
                 className="input input-bordered input-primary m-5 w-full max-w-xs flex" 
                 {...register("about")}/>
+
+                <button type="submit" className="btn btn-primary px-16">Submit</button>
 
 
             </form>

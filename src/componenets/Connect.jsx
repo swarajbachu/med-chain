@@ -2,6 +2,8 @@ import { TempleWallet } from "@temple-wallet/dapp";
 import React from "react";
 import { useState } from "react";
 import state from "../state";
+
+
 export default function Connect() {
   const connect = async () => {
     try {

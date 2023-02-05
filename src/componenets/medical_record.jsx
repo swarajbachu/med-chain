@@ -23,33 +23,33 @@ const MedicalRecords = () => {
     const onSubmit = async (data) => {
         console.log(data);
         try {
-          const formData = new FormData();
-          formData.append("file", fileImg);
-          const resfile = await fetch(
-            "https://api.pinata.cloud/pinning/pinFileToIPFS",
-            {
-              method: "post",
-              data: formData,
-              headers: {
-                pinata_api_key: `0108888205bf09943941`,
-                pinata_secret_api_key: `7a37ef66dcbf0b473fe215d24e2c8c4e4be7dac54fd1f4de13f4106bf12453be`,
-                "Content-Type": "multipart/form-data",
-              },
-            }
-          );
-    
-          const hash = `ipfs://${resfile.data.IpfsHash}`;
-          console.log(hash);
+            const formData = new FormData();
+            formData.append("file", fileImg);
+            const resfile = await fetch(
+                "https://api.pinata.cloud/pinning/pinFileToIPFS",
+                {
+                    method: "post",
+                    data: formData,
+                    headers: {
+                        pinata_api_key: `0108888205bf09943941`,
+                        pinata_secret_api_key: `7a37ef66dcbf0b473fe215d24e2c8c4e4be7dac54fd1f4de13f4106bf12453be`,
+                        "Content-Type": "multipart/form-data",
+                    },
+                }
+            );
+
+            const hash = `ipfs://${resfile.data.IpfsHash}`;
+            console.log(hash);
         } catch (error) {
-          console.log("Error sending File to IPFS: ");
-          console.log(error);
+            console.log("Error sending File to IPFS: ");
+            console.log(error);
         }
-      };
+    };
 
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} className= "flex flex-col p-16 border-2 border-gray-400 rounded-lg">
 
 
                 <input type="text"
@@ -71,11 +71,11 @@ const MedicalRecords = () => {
                     placeholder="Decription"
                     className="input input-bordered input-primary m-5 w-full max-w-xs flex"
                     {...register("tags")} />
-                <input type="file" className="file-input file-input-bordered w-full max-w-xs ml-4"
+                <p className='pl-6'>{errors.tags?.message}</p>
+                <input type="file" placeholder="Select File" className="file-input file-input-bordered w-full max-w-xs ml-4"
                     {...register("file")}
                 />
-                <button type='submit' className="btn btn-active btn-primary ml-10
- px-16">Submit</button>
+                <button type='submit' className="btn btn-active btn-primary ml-4 mt-10 px-16">Submit</button>
 
             </form>
         </div>
