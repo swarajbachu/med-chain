@@ -3,8 +3,6 @@ import { MedicalRecordPage } from './containers'
 import MedChainLandingPage from './containers/MedChainLandingPage'
 
 
-import './App.css'
-
 function App() {
 
   return (
