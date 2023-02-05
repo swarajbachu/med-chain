@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import state from "../state";
 
 
 const MedicalRecords = () => {
+
+    const [show,setShow] = useState(false);
 
 
     const schema = yup.object().shape({
@@ -21,6 +22,9 @@ const MedicalRecords = () => {
     });
     const [fileImg, setFileImg] = useState(null);
     const onSubmit = async (data) => {
+
+        setShow(!show);
+    
         console.log(data);
         try {
             const formData = new FormData();
@@ -76,7 +80,11 @@ const MedicalRecords = () => {
                     {...register("file")}
                 />
                 <button type='submit' className="btn btn-active btn-primary ml-4 mt-10 px-16">Submit</button>
-
+                {
+                    show && <p className="font-bold ml-4 mt-4 text-green-500">
+                        Successfully Submitted 
+                    </p>
+                }
             </form>
         </div>
     )

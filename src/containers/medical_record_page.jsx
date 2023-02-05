@@ -6,8 +6,16 @@ const MedicalRecordPage = () => {
     <div className="w-[100vw] p-16 ">
       <UserDetailRecord />
       <div className="flex">
-        <MedicalCard />
-        <MedicalCard />
+        <MedicalCard 
+        Desease={"Heart Problem"}
+        hospital = {"AIMS"}
+        Description = {"Meds"}
+        />
+        <MedicalCard 
+        Desease={"Lungs Problem"}
+        hospital = {"AIMS"}
+        Description = {"Its because you smoke"}
+        />
       </div>
     </div>
   );

@@ -1,9 +1,12 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
+import { useEffect } from 'react';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 const UserForm = () => {
+
+    const [show,setShow] = useEffect(false);
 
     const schema = yup.object().shape({
         name: yup.string().required("name is required"),
@@ -20,6 +23,7 @@ const UserForm = () => {
 
     const onSubmit = (data) => {
         console.log(data)
+        
     }
     
     // form: name, age, blood_group, allergies, medication, about
