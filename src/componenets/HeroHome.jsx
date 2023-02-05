@@ -1,10 +1,35 @@
 import React, { useState } from 'react';
+import { TempleWallet } from "@temple-wallet/dapp";
 
 // import HeroImage from '../images/hero-image.png';
 
 function HeroHome() {
 
-  const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const connect = async () => {
+        try {
+          const available = await TempleWallet.isAvailable();
+          if (!available) {
+            throw new Error("Temple Wallet not installed");
+          }
+    
+          // Note:
+    
+          // use `TempleWallet.isAvailable` method only after web application fully loaded.
+    
+          // Alternatively, you can use the method `TempleWallet.onAvailabilityChange`
+          // that tracks availability in real-time .
+    
+          const wallet = new TempleWallet("My Super DApp");
+          await wallet.connect("ghostnet");
+          const tezos = wallet.toTezos();
+          const accountPkh = await tezos.wallet.pkh();
+          state.wallet = tezos.wallet;
+        } catch (err) {
+          console.error(err);
+        }
+      };
+
+  // const [videoModalOpen, setVideoModalOpen] = useState(false);
 
   return (
     <section className="relative">
@@ -38,7 +63,7 @@ function HeroHome() {
               <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Decentralized, Secure Medical Record Management</p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
                 <div>
-                  <a className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Connect to Wallet</a>
+                  <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0" onClick = {connect}>Connect to Wallet</button>
                 </div>
               </div>
             </div>
