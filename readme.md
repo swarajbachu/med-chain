@@ -1,4 +1,5 @@
-#med-chain
+## Med-Chain⛓️
+
 Med-Chain is an Application for Storing Medical records in a decentralized distributed server. 
 
 To clone and run this repo, run this commands in terminal:
@@ -22,4 +23,4 @@ Once you click on submit to record your details.
 
 requirements:
 * Temple Wallet
-* Pinata Api Keys
+* Pinata API Keys
