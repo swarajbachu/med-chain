@@ -8,6 +8,8 @@ To clone and run this repo, run this commands in terminal:
 * npm install
 * npm run dev
 
+If you wanna check the deployed contract here it is  https://better-call.dev/ghostnet/KT1NXoVB8YM7VHsvjKQL5NtwkULsrZ4yJutM/storage
+
 After running the project, you will get this interface:
 ![image](https://user-images.githubusercontent.com/110032619/217446271-ba612761-b109-4f3e-86f6-8be92b1c92f3.png)
 
