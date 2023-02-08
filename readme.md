@@ -24,3 +24,9 @@ Once you click on submit to record your details.
 requirements:
 * Temple Wallet
 * Pinata API Keys
+
+
+
+Built with Tezos
+
+![Tezos logo](https://s2.coinmarketcap.com/static/img/coins/200x200/2011.png)
