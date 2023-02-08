@@ -15,6 +15,7 @@ After connecting wallet, you will redirectd to this another page:
 
 
 ![image](https://user-images.githubusercontent.com/110032619/217446627-31d8075a-b455-492c-bbd9-46ecd097ac2e.png)
+
 fill the details and upload medical record and click on submit.
 
 Once you click on submit to record your details.
