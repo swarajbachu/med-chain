@@ -32,3 +32,23 @@ requirements:
 Built with Tezos
 
 ![Tezos logo](https://s2.coinmarketcap.com/static/img/coins/200x200/2011.png)
+
+
+
+
+
+# Medical History Management Software
+This software provides a convenient and secure way for users to manage their medical history. Users can order an NFC tag from our website that contains their complete medical history. The software provides detailed analytics to help users and their healthcare providers make more informed decisions about their health.
+
+# Features
+* Secure storage: All medical information is stored securely to protect it from unauthorized access.
+* Easy access: Users can access their medical history quickly and easily using an NFC tag.
+* Detailed analytics: The software provides detailed analytics to help users and their healthcare providers make informed decisions about their health.
+* Medicine tracking: The software allows users to track which medicines are working for them and which are not.
+
+# Installation
+
+To use the software, users will need to register on our website and order an NFC tag. Once they receive the tag, they can tap it to their phone to access their medical history.
+
+# Usage
+To use the software, simply tap the NFC tag to your phone. The software will then provide access to your complete medical history, as well as detailed analytics and medicine tracking features.
